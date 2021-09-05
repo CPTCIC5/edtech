@@ -11,14 +11,25 @@
     <form>
         <div id="center">
         <div class="form-group">
-        <h1>RESULTS</h1>
-
-          {% for qs2 in qset2 %}
-          <a href="{{qs2.slug}}">{{qs2.course_name}}</a><br>
+            <h1>BROCHURE</h1>
+          <label for="exampleInputEmail1">Click on the link below to get you road map for your journey.</label><br>
+          <small style="color:grey">The roadmap serves as a guide for the team during their journey, allowing them to recognize and act on events that require a change of direction.</small><br>
+          <a href="https://github.com/kamranahmedse/developer-roadmap">ROAD MAP</a><br>
+          <small style="color:grey">These are the courses you'll need to learn the required skills.</small><br>
+          <label for="exampleInputEmail1">Click on the link below to get course links.</label><br>
+          {% for query in qset2 %}
+          <a href="{{query.slug}}"><button>{{query.course_name}}</button></a><br>
           {% endfor %}
           <small style="color:grey;">Having a sense of community unites us. Being a part of a community can make us feel as though we are a part of something greater than ourselves. It can give us opportunities to connect with people, to reach for our goals, and makes us feel safe and secure. It's important for every person to have a sense of community.</small>
-          <label for="exampleInputEmail1">Click on the link below to join the community.</label><br>
+          <br><label for="exampleInputEmail1">Click on the link below to join the community.</label><br>
           <a href="https://discord.com/invite/ukhrVx4kyp">JOIN SERVER HERE</a><br>
+          <a href="https://discord.com/invite/ukhrVx4kyp">JOIN OUR COMMUNITY</a><br>
+        <br><br>
+          <a href="{% url 'index:index' %}">HOME</a>
+          <small style="color:grey;">Having a sense of community unites us. Being a part of a community can make us feel as though we are a part of something greater than ourselves. It can give us opportunities to connect with people, to reach for our goals, and makes us feel safe and secure. It's important for every person to have a sense of community.</small>
+          <br><label for="exampleInputEmail1">Click on the link below to join the community.</label><br>
+          <a href="https://discord.com/invite/ukhrVx4kyp">JOIN SERVER HERE</a><br>
+          <a href="https://discord.com/invite/ukhrVx4kyp">JOIN OUR COMMUNITY</a><br>
         <br><br>
           <a href="{% url 'index:index' %}">HOME</a>
           <!-- <small id="emailHelp" class="form-text text-muted">Type either "Paid" or "Free".
@@ -38,4 +49,4 @@
     }
 </style>
 </body>
-</html> 
+</html>
