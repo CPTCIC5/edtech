@@ -18,10 +18,7 @@ o	If you’re a person who have no idea about the which skill is best for you , 
 ## App/Web link if hosted (recommended but optional)
 
 ## Video Demo (Mandatory)
-// link of video demo. you can upload video on google drive. Make sure that
-video is accessible for anyone with the link.
-
+https://drive.google.com/drive/folders/1cOzx8ZWw-PQaLw7MvS9nhCKn1BUbo76G?usp=sharing
 ## Screenshots (Mandatory)
-// Screenshots regarding your project. you can provide a drive folder link with
-screenshots or upload it on github itself.
+https://drive.google.com/drive/folders/1cOzx8ZWw-PQaLw7MvS9nhCKn1BUbo76G?usp=sharing
 
