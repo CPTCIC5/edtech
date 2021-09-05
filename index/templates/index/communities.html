@@ -1,0 +1,13 @@
+{% extends "index/base.html" %}
+{% block title %}COMMUNITIES {% endblock title %}
+{% block content %}
+
+        {% for object in qset %}
+            <strong><h3>{{object.user}}</h3></strong><br>
+            <h1>{{object.community_name}} </h1><br>
+            <h4>{{object.leader}}</h4><br>
+            <br>
+            <p>{{object.details}}</p><br>
+            <a href="{{object.course_link}}"><button type="menu">Join</button></a>
+        {% endfor %}
+{% endblock content %}

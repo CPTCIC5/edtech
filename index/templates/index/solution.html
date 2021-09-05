@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <form>
+        <div id="center">
+        <div class="form-group">
+        <h1>RESULTS</h1>
+
+          {% for qs2 in qset2 %}
+          <a href="{{qs2.slug}}">{{qs2.course_name}}</a><br>
+          {% endfor %}
+          <small style="color:grey;">Having a sense of community unites us. Being a part of a community can make us feel as though we are a part of something greater than ourselves. It can give us opportunities to connect with people, to reach for our goals, and makes us feel safe and secure. It's important for every person to have a sense of community.</small>
+          <label for="exampleInputEmail1">Click on the link below to join the community.</label><br>
+          <a href="https://discord.com/invite/ukhrVx4kyp">JOIN SERVER HERE</a><br>
+        <br><br>
+          <a href="{% url 'index:index' %}">HOME</a>
+          <!-- <small id="emailHelp" class="form-text text-muted">Type either "Paid" or "Free".
+</small> -->
+        <!-- </div>
+        <button type="Previous" class="btn btn-primary"><a href="Question4.html" style="color: white;">Previous</a></button>
+        <button type="Submit" class="btn btn-primary"><a href="solution.html" style="color: white;">Submit</a></button>
+    </div> -->
+
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+   
+<style>
+    #center{
+        padding: 100px 50px 50px 100px;
+    }
+</style>
+</body>
+</html> 

@@ -1,0 +1,45 @@
+{% extends "index/base.html" %}
+{% block title %}LOGIN {% endblock title %}
+{% block content %}
+
+
+<!-- ----------- ACCOUNT PAGE ----------- -->
+<div class="account-page">
+    <div class="container">
+        <div class="row">
+            <div class="col-2">
+                {% load static %}
+                <img src="{% static 'login.png'%}" width="100%">
+            </div>
+            <div class="col-2">
+                <div class="form-container">
+                    <div class="form-btn">
+                        <span onclick="login()">Login</span>
+                        <span onclick="register()">Register</span>
+                        <hr id="Indicator">
+                    </div>
+
+                    <form id="LoginForm" method="POST">
+                        {% csrf_token %}
+                        <div class="field">
+                        {{form.as_p}}
+                        </div>
+                        <button type="submit" class="btn">Login</button>
+                        <a href="{% url 'users:register' %}">No Account?Register</a>
+                    </form>
+
+                    <form id="RegForm" method= "POST" >
+                        {% csrf_token %}
+                        <input type="text" id="username" name="username" placeholder="Username">
+                        <input type="email" id="email" name="email" placeholder="Email">
+                        <input type="password" id="password" name="password" placeholder="Password">
+                        <input type="password"  id="confirm_password"  name="confirm_password" placeholder="Confirm Password">
+                        <button type="submit" class="btn btn-primary" >Register</button>
+                        <a href="{% url 'users:register' %}">Already have an account?Login</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

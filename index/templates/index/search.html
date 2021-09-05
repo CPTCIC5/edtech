@@ -1,0 +1,25 @@
+{% extends "index/base.html" %}
+{% block title %}{{searched}} {% endblock title %}
+{% block content %}
+
+{% if searched %}
+<p>You searched {{searched}}..</p>
+{% endif %}
+
+{% if x3 %}
+{{x3}}
+{% endif %}
+
+{% if x1 %}
+{% for i1 in x1 %}
+{{i1.community_name}}
+{{i1.leader}}
+{{i1.details}}
+{{i1.link}}
+{{i1.user}}
+{% endfor %}
+{% else %}
+<p> No result found for {{searched}}</p>
+{% endif %}
+
+{% endblock content %}

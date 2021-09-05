@@ -1,0 +1,98 @@
+{% extends 'index/base.html' %}
+{% block title %}INDEX {% endblock title %}
+
+{% block content %}
+{% load static %}
+
+<div class="row">
+    <div class="col-2">
+        <h1>Great First <br>Headline Here</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>Delectus officiis beatae odit laboriosam saepe dolore soluta, rem ad sit ratione.</p>
+        {% if user.is_authenticated %}
+        <a href="{% url 'index:learn' %}" class="btn">Get Started &#8594</a>
+        {% else %}
+        <a href="{% url 'users:register' %}" class="btn">Login</a>
+        {% endif %}
+    </div>
+    <div class="col-2">
+        <img src="{% static 'graphics.png' %}">
+    </div>
+</div>
+</div>
+</div>
+    
+    <!---------TESTIMONIAL---------->
+   <div class="testimonial">
+       <div class="small-container">
+           <div class="row">
+               <div class="col-4">
+                <i class="fas fa-quote-left"></i>
+                   <p style="color: black;">Lorem ipsum dolor elit. Ut quod et fugit sit atque quam nemo laudantium dolore quisquam possimus nam?</p>
+                   <div class="center-text">
+                   <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <img src="{% static  'Profile Photo.png' %}">
+                <h3>John Doe</h3>
+                  </div>
+               </div>
+               <div class="col-4">
+                <i class="fas fa-quote-left"></i>
+                   <p style="color: black;">Lorem ipsum dolor elit. Ut quod et fugit sit atque quam nemo laudantium dolore quisquam possimus nam?</p>
+                   <div class="center-text">
+                   <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <img src="{% static  'Profile Photo.png' %}">
+                <h3>John Doe</h3>
+                  </div>
+               </div>
+               <div class="col-4">
+                <i class="fas fa-quote-left"></i>
+                   <p style="color: black;">Lorem ipsum dolor elit. Ut quod et fugit sit atque quam nemo laudantium dolore quisquam possimus nam?</p>
+                   <div class="center-text">
+                   <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <img src="{% static 'Profile Photo.png' %}">
+                <h3>John Doe</h3>
+                  </div>
+               </div>
+            </div>
+       </div>
+   </div>
+   <!--------- BRANDS  --------->
+   .<div class="brands">
+       <div class="small-container">
+           <div class="row">
+               <div class="col-5">
+                   <img src="{% static 'udemy.png'%}">
+                </div>
+                <div class="col-5">
+                    <img src="{% static 'coursera.png' %} ">
+                 </div>
+                 <div class="col-5">
+                    <img src="{% static 'udacity.png' %} ">
+                 </div>
+                 <div class="col-5">
+                    <img src="{% static 'edx.png' %}">
+                 </div>
+                 <div class="col-5">
+                    <img src="{% static 'bl.png' %}">
+                 </div>
+           </div>
+       </div>
+   </div>
+{% endblock content %}

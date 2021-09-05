@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <form method="POST">
+      {% csrf_token %}
+        <div id="center">
+        <div class="form-group">
+          <label for="goal" >1. What's your goal?</label>
+          <input type="text" class="form-control" id="goal" name="goal" aria-describedby="emailHelp" placeholder="goal oriented learning is always better">
+          <small id="emailHelp" class="form-text text-muted">Write something like: Freelancing, Personality development, upgrading skills, career or hobby.</small>
+        
+          <div class="form-group">
+            <label for="domain">2. In which domain you are interested in?</label>
+            <small id="domain" name="domain" class="form-text text-muted">GOAL -> FREELANCING</small>
+            <input type="text" class="form-control" id="domain" name="domain" aria-describedby="emailHelp" placeholder="choose domain">
+            <small id="emailHelp" class="form-text text-muted">Write one of these: <br>Graphics & Design
+              <br>Digital Marketing
+              <br>Writing & Translation
+              <br>Video & Animation
+              <br>Music & Audio
+              <br>Programming & Tech
+              <br>Data 
+              <br>Business
+              <br>Lifestyle
+          </small>
+          </div>
+          
+            <div class="form-group">
+              <label for="interest">3. Choose what's suitable for you?</label>
+              <small id="interest" class="form-text text-muted">DOMAIN -> PROGRAMMING AND TECH</small>
+              <input type="text"  name="interest" class="form-control" id="interest" aria-describedby="emailHelp" placeholder="choose domain">
+              <small id="emailHelp" class="form-text text-muted">Write one of these: <br>WordPress
+                <br>Website Builders & CMS
+                <br>Game Development
+                <br>Development for Streamers
+                <br>Web Programming
+                <br>E-Commerce Development
+                <br>Mobile Apps
+                <br>Desktop Applications
+                <br>Support & IT
+                <br>Get Your Website in a Few Steps
+                <br>Chatbots
+                <br>Online Coding LessonsNEW
+                <br>Cybersecurity & Data Protection
+                <br>Convert Files
+                <br>User Testing
+    </small>
+            </div> 
+              <div class="form-group">
+                <label for="time">4. How much time you can dedicate in weeks?</label>
+                <small id="time" class="form-text text-muted">SUB -DOMAIN -> WEB PROGRAMMING</small>
+                <input type="text" name="time" class="form-control" id="time" aria-describedby="emailHelp" placeholder="time in weeks">
+                <small id="emailHelp" class="form-text text-muted">Write the number of weeks you think is ideal for you.
+      </small>
+              </div>
+              
+                <div class="form-group">
+                  <label for="pricing">5. What you you prefer - paid course / free?</label>
+                  <small id="pricing" class="form-text text-muted">SUB -DOMAIN -> WEB PROGRAMMING</small>
+                  <input type="text" name="pricing" class="form-control" id="pricing" aria-describedby="emailHelp" placeholder="paid/free">
+                  <small id="emailHelp" class="form-text text-muted">Type either "Paid" or "Free".
+        </small>
+                </div>
+                <button type="Submit" class="btn btn-primary">Submit</button>
+        </div>
+        <br><br>
+          <a href="{%  url 'index:index'%}">HOME</a>
+      </form>
+    </div>
+
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+   
+<style>
+    #center{
+        padding: 100px 50px 100px;
+    }
+</style>
+</body>
+</html>
